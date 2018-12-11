@@ -20,6 +20,6 @@ resource "azurerm_resource_group" "rg-stg" {
 
 resource "azurerm_resource_group" "rg-prd" {
   name     = "${var.project-name}-prd"
-  provider = "azurerm.nonprod"
+  provider = "azurerm.prod"
   location = "${var.location}"
 }
