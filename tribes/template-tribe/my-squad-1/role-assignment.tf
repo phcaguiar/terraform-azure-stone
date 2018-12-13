@@ -4,7 +4,7 @@
 
 resource "azurerm_role_assignment" "assign-eduardo-assais-to-rg-financial-dev" {
   scope                = "${azurerm_resource_group.rg-dev.id}"
-  role_definition_name = "Owner" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
+  role_definition_name = "Reader" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
   principal_id         = "129c90e0-7e14-4c4d-ae91-a3c527f7b951" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
 }
 
