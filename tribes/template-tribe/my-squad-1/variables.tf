@@ -1,5 +1,5 @@
 variable "squad-name"  {
-    default =   "delivery"
+    default =   "my-squad-1"
 }
 variable "location" {
     default =   "centralus"
