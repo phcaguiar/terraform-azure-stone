@@ -2,11 +2,11 @@
 
 # Terraform resource to set development environment azure resource group permissions
 
-# resource "azurerm_role_assignment" "user-name-dev" {
-#   scope                = "${azurerm_resource_group.rg-dev.name}"
-#   role_definition_name = ""
-#   principal_id         = ""
-# }
+resource "azurerm_role_assignment" "assign-eduardo-assais-to-rg-financial-dev" {
+  scope                = "${azurerm_resource_group.rg-dev.name}"
+  role_definition_name = "Reader"
+  principal_id         = "146709ad-f2ac-4df2-bfee-7d13cc5aee52"
+}
 
 # Terraform resource to set staging environment azure resource group permissions
 
