@@ -23,3 +23,10 @@
 #   role_definition_name = "" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
 #   principal_id         = "" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
 # }
+
+
+resource "azurerm_role_assignment" "assign-igor-souza-to-rg-template-tribe-dev" {
+  scope                = "${azurerm_resource_group.rg-dev.id}"
+  role_definition_name = "Reader" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
+  principal_id         = "146709ad-f2ac-4df2-bfee-7d13cc5aee52" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
+}
