@@ -2,13 +2,13 @@
 
 # Terraform resource to set development environment azure resource group permissions
 
-resource "azurerm_role_assignment" "isouza" {
+resource "azurerm_role_assignment" "isouza-dev" {
   scope                = "${azurerm_resource_group.rg-dev.id}"
   role_definition_name = "Reader" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
   principal_id         = "isouza@stone.com.br" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
 }
 
-resource "azurerm_role_assignment" "edu-assais" {
+resource "azurerm_role_assignment" "edu-assais-dev" {
   scope                = "${azurerm_resource_group.rg-dev.id}"
   role_definition_name = "Reader" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
   principal_id         = "eduardo.assais@stone.com.br" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
@@ -16,7 +16,7 @@ resource "azurerm_role_assignment" "edu-assais" {
 
 # Terraform resource to set staging environment azure resource group permissions
 
-resource "azurerm_role_assignment" "dmorales" {
+resource "azurerm_role_assignment" "dmorales-stg" {
   scope                = "${azurerm_resource_group.rg-stg.id}"
   role_definition_name = "Reader" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
   principal_id         = "dmorales@stone.com.br" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
@@ -24,13 +24,13 @@ resource "azurerm_role_assignment" "dmorales" {
 
 # Terraform resource to set production environment azure resource group permissions
 
-resource "azurerm_role_assignment" "cnatan" {
+resource "azurerm_role_assignment" "cnatan-prd" {
   scope                = "${azurerm_resource_group.rg-prd.id}"
   role_definition_name = "Contributor" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
   principal_id         = "cnatan@stone.com.br" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
 }
 
-resource "azurerm_role_assignment" "dmorales" {
+resource "azurerm_role_assignment" "dmorales-prd" {
   scope                = "${azurerm_resource_group.rg-prd.id}"
   role_definition_name = "Contributor" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
   principal_id         = "dmorales@stone.com.br" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
