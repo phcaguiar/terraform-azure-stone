@@ -13,4 +13,3 @@ resource "azurerm_role_assignment" "isouza-prd" {
   role_definition_name = "Reader"
   principal_id         = "isouza@stone.com.br"
 }
-#
