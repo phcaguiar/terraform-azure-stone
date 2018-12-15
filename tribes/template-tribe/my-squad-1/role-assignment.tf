@@ -5,7 +5,7 @@
 resource "azurerm_role_assignment" "assign-user-name-to-rg-mytribe-dev" {
   scope                = "${azurerm_resource_group.rg-dev.id}"
   role_definition_name = "Reader" ## See in https://docs.microsoft.com/en-us/azure/role-based-access-control/
-  principal_id         = "33bdbac9-1a45-4780-baa2-40119601a1a7" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
+  principal_id         = "isouza@stone.com.br" ## Run az ad user show --upn-or-object-id user.mail@mail.com.br --query objectId
 }
 
 # Terraform resource to set staging environment azure resource group permissions
