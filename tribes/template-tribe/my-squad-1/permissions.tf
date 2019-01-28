@@ -24,7 +24,7 @@
 #   principal_id         = "" ## Insert only one mail address
 # }
 
-resource "azurerm_role_assignment" "test" {
+resource "azurerm_role_assignment" "newrg" {
   scope                = "${data.azurerm_resource_group.rg-prd-ec2.id}"
   role_definition_id   = "${data.azurerm_role_definition.CustomRoleContributorProd.id}" ## See the options in the repository documentation
   principal_id         = "$(principal.id)" ## Insert only one mail address
