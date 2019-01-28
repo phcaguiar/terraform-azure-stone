@@ -25,7 +25,7 @@
 # }
 
 resource "azurerm_role_assignment" "test" {
-  scope                = "${azurerm_resource_group.rg-prd-ec2.id}"
+  scope                = "${data.azurerm_resource_group.rg-prd-ec2.id}"
   role_definition_id   = "${data.azurerm_role_definition.CustomRoleContributorProd.id}" ## See the options in the repository documentation
   principal_id         = "129c90e0-7e14-4c4d-ae91-a3c527f7b951" ## Insert only one mail address
 }
