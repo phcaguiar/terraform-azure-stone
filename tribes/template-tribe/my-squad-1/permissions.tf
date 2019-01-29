@@ -23,9 +23,3 @@
 #   role_definition_name or role_definition_id  = "" ## See the options in the repository documentation
 #   principal_id         = "" ## Insert only one mail address
 # }
-
-resource "azurerm_role_assignment" "eduardo-assair-prd" {
-  scope                = "${data.azurerm_resource_group.rg-prd-ec2.id}"
-  role_definition_id   = "${data.azurerm_role_definition.CustomRoleContributorNonProd.id}" ## See the options in the repository documentation
-  principal_id         = "eduardo.assais@stone.com.br" ## Insert only one mail address
-}
